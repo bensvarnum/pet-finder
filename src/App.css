@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: green;
+}
+
+.nav-name {
+  text-align: center;
+  margin: 0;
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.nav-name a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 25px;
+  margin: 10px;
+}
+
+.nav-name a:hover {
+  color: #99ccff;
+}
+
+.button {
+  margin: 25px 25px 0px 0px !important;
+  height: 20% !important;
+  background-color: #1affff !important;
+}
+
+.button:hover {
+  opacity: 90% !important;
+}
+
+.logo-image {
+  width: 90px;
+  padding: 15px 0px 0px 25px;
+  border-radius: 50%;
+}
+
