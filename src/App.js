@@ -1,6 +1,7 @@
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
 import { Navbar, Landing } from "./components";
+import PetForm from "./components/PetForm";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <body>
         <Navbar />
         <Landing />
+        <PetForm />
       </body>
       <footer></footer>
     </div>
