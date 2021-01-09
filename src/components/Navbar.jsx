@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react';
 
 class Navbar extends Component {
     render() {
         return (
             <div className="navbar">
                 <div className="logo">
-                    <img className="logo-image" src="" />
+                    <img className="logo-image" src="./img/pets-logo.png" />
                 </div>
                 <div className="nav-name">
-                    <h1>Pet-Finder</h1>
+                    <a className="lost" href="#">Lost Pets</a>
+                    <img className="center-logo" src="./img/dog-bone-logo.png" />
+                    <a className="found" href="#">Found Pets</a>
                 </div>
-                <div className="link-group">
-                    <ul className="links">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Lost Pets</a></li>
-                        <li><a href="#">Found Pets</a></li>
-                    </ul>
+                <div className="login-button">
+                    <button className="ui button">Login</button>
                 </div>
             </div>
         )
