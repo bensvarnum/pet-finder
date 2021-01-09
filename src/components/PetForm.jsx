@@ -3,12 +3,26 @@ import { Button, Form, Segment } from "semantic-ui-react";
 
 function PetForm() {
   // const onSubmit = data => console.log(data)
+  const [petName, showPetName] = useState(false);
+  const [otherText, showOtherText] = useState(false);
+
+  const lostToggler = () => {
+    showPetName(!petName);
+  };
+
+  const otherTextToggler = () => {
+    showOtherText(!otherText);
+  };
+
+  const resetToggler = () => {
+    showPetName(false);
+  };
 
   return (
-    <Segment inverted>
+    <Segment color="blue" inverted>
       <div className="form">
         <div className="form__header">
-          <h3>Lost or Found form</h3>
+          <h3>Lost or Found</h3>
           <p>
             Is your pet lost? Did you find someones pet and would like to find
             the owner?
@@ -22,21 +36,47 @@ function PetForm() {
                 control="input"
                 type="radio"
                 name="htmlRadios"
+                onClick={lostToggler}
               />
+
               <Form.Field
                 label="Found"
                 control="input"
                 type="radio"
                 name="htmlRadios"
+                onClick={resetToggler}
               />
             </Form.Group>
+            {petName && (
+              <Form.Group>
+                <Form.Input
+                  type="text"
+                  label="Pets Name"
+                  Placeholder="Name of Pet"
+                />
+              </Form.Group>
+            )}
             <Form.Group>
-              <Form.Field label="Fur Color" control="select">
-                <option value="white">White</option>
+              <Form.Field
+                label="Fur Color"
+                control="select"
+                onClick={otherTextToggler}
+              >
+                ><option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="brown">Brown</option>
                 <option value="blonde">Blonde</option>
+                <option value="other">Other</option>
               </Form.Field>
+              {otherText && (
+                <Form.Group>
+                  <Form.Input
+                    type="text"
+                    label="Other Fur Color"
+                    Placeholder="Fur Color"
+                  />
+                </Form.Group>
+              )}
             </Form.Group>
             <Form.Group inline>
               <label>Size</label>
