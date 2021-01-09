@@ -10,13 +10,12 @@ class Navbar extends Component {
                 </div>
                 <div className="nav-name">
                     <a className="lost" href="#">Lost Pets</a>
-                    <h1>Pet-Finder</h1>
-                    <a href="#">Found Pets</a>
+                    <img className="center-logo" src="./img/dog-bone-logo.png" />
+                    <a className="found" href="#">Found Pets</a>
                 </div>
-                {/* <div className="login-button">
-                </div> */}
-                <button className="ui button">Login</button>
-
+                <div className="login-button">
+                    <button className="ui button">Login</button>
+                </div>
             </div>
         )
     }
