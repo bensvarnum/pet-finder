@@ -8,6 +8,9 @@
   .logo-image {
     display: none;
   }
+  .navbar .button {
+    display: none !important;
+  }
 }
 
 /* Navbar */
@@ -19,12 +22,16 @@
   background-color: green;
 }
 
+.navbar .icon {
+  display: none;
+}
+
 .nav-name {
   text-align: center;
   margin: 0;
   color: #FFF;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -42,6 +49,14 @@
 
 .login-button {
   height: 100%;
+}
+
+.login {
+  color: #FFF;
+}
+
+.login:hover {
+  color: #99ccff;
 }
 
 .button {
@@ -62,5 +77,10 @@
 
 .center-logo {
   width: 150px;
+}
+
+.login-btn-group {
+  display: flex;
+  justify-content: space-between;
 }
 
