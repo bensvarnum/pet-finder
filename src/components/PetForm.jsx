@@ -1,18 +1,33 @@
 import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
+import "./PetForm.css";
 
 function PetForm() {
   // const onSubmit = data => console.log(data)
   const [petName, showPetName] = useState(false);
   const [otherText, showOtherText] = useState(false);
+  const [petNameInput, setPetNameInput] = useState("");
+  const [furColorChoice, setFurColorChoice] = useState("white");
+  const [petSize, setPetSize] = useState("small");
+
+  const onHandleChange = (e) => {
+    setPetNameInput(e.target.value);
+    setFurColorChoice(e.target.value);
+    setPetSize(e.target.value);
+  };
 
   const lostToggler = () => {
     showPetName(!petName);
   };
 
-  const otherTextToggler = () => {
-    showOtherText(!otherText);
-  };
+  // const otherTextToggler = (e) => {
+  //   if (e.target.value === "other") {
+  //     showOtherText({ otherText: true });
+  //   }
+  //   // if (e.target.value !== "other") {
+  //   //   showOtherText({ otherText: false });
+  //   // }
+  // };
 
   const resetToggler = () => {
     showPetName(false);
@@ -52,7 +67,9 @@ function PetForm() {
                 <Form.Input
                   type="text"
                   label="Pets Name"
-                  Placeholder="Name of Pet"
+                  placeholder="Name of Pet"
+                  value={petNameInput}
+                  onChange={onHandleChange}
                 />
               </Form.Group>
             )}
@@ -60,20 +77,21 @@ function PetForm() {
               <Form.Field
                 label="Fur Color"
                 control="select"
-                onClick={otherTextToggler}
+                value={furColorChoice}
+                onChange={onHandleChange}
               >
-                ><option value="white">White</option>
+                <option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="brown">Brown</option>
                 <option value="blonde">Blonde</option>
                 <option value="other">Other</option>
               </Form.Field>
-              {otherText && (
+              {furColorChoice === "other" && (
                 <Form.Group>
                   <Form.Input
                     type="text"
                     label="Other Fur Color"
-                    Placeholder="Fur Color"
+                    placeholder="Fur Color"
                   />
                 </Form.Group>
               )}
@@ -106,21 +124,21 @@ function PetForm() {
               <Form.Input
                 type="text"
                 label="Pets Name"
-                Placeholder="Name of Pet"
+                placeholder="Name of Pet"
               />
             </Form.Group>
             <Form.Group>
               <Form.Input
                 type="tel"
                 label="Phone Number"
-                Placeholder="Phone Number"
+                placeholder="Phone Number"
                 id="phone"
                 name="phone"
                 pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               />
             </Form.Group>
             <Form.Group>
-              <Form.Input type="email" label="Email" Placeholder="Email" />
+              <Form.Input type="email" label="Email" placeholder="Email" />
             </Form.Group>
             <Form.Field
               label="Location or Last Seen"
