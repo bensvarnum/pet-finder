@@ -1,6 +1,7 @@
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
-import { Navbar, Landing } from './components'
+import { Navbar} from './components'
+import { Landing } from './pages'
 
 function App() {
   return (

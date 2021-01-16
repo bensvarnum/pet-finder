@@ -1,4 +1,4 @@
 import Navbar from './Navbar';
-import Landing from './Landing';
+import PostCard from './PostCard/PostCard';
 
-export { Navbar, Landing };
+export { Navbar, PostCard };
