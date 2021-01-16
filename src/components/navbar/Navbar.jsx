@@ -26,7 +26,7 @@ const Navbar = () => {
                 <a className="found" href="#">Found Pets</a>
             </div>
             <div className="login-button">
-                <button className="fa fa-bars" onClick={showDrawer}>
+                <button className="fa fa-bars fa-2x" onClick={showDrawer}>
                 </button>
             </div>
         </div>
