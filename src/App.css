@@ -52,7 +52,7 @@
 }
 
 .login {
-  color: #FFF;
+  color: #fff;
 }
 
 .login:hover {
@@ -78,12 +78,8 @@
 .center-logo {
   width: 150px;
 }
-<<<<<<< HEAD
-=======
 
 .login-btn-group {
   display: flex;
   justify-content: space-between;
 }
-
->>>>>>> development
