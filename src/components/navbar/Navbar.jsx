@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
             <div className="nav-name">
                 <a className="lost" href="#">Lost Pets</a>
-                <img className="center-logo" onClick={showDrawer} src="./img/dog-bone-logo.png" />
+                <img className="center-logo" src="./img/dog-bone-logo.png" />
                 <a className="found" href="#">Found Pets</a>
             </div>
             <div className="login-button">
@@ -31,14 +31,21 @@ const Navbar = () => {
             </div>
         </div>
         <Drawer
-            title="Login"
+            title="Navigation"
             placement="left"
             closable={true}
             onClose={onClose}
             visible={visible}
-            enableDragHandle
         >
-            <div className="login-btn-group">
+            <div className="drawer-nav-links">
+                <h3>Search Categories</h3>
+                <div className="drawer-nav-link-group">
+                    <a className="lost" href="#">Lost Pets</a>
+                    <a className="found" href="#">Found Pets</a>
+                </div>
+            </div>
+            <div className="drawer-login-btn-group">
+                <h3>Login</h3>
                 <ul>
                     <li><Button type="primary">Facebook</Button></li>
                     <li><Button type="primary">Google</Button></li>

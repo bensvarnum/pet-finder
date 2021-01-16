@@ -1,14 +1,3 @@
 .App {
   text-align: center;
 }
-
-/* Responsive Design */
-
-@media screen and (max-width: 600px) {
-  .logo-image {
-    display: none;
-  }
-  .navbar .button {
-    display: none !important;
-  }
-}
