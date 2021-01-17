@@ -1,0 +1,114 @@
+/* Responsive Design */
+
+@media screen and (max-width: 600px) {
+    .logo-image {
+      display: none;
+    }
+    .navbar a {
+      display: none;
+    }
+    .center-logo {
+        width: 100px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: green;
+}
+  
+.navbar .icon {
+    display: none;
+}
+  
+.nav-name {
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.nav-name a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 25px;
+    margin: 10px;
+}
+  
+.nav-name a:hover {
+    color: #99ccff;
+}
+  
+.login-button {
+    height: 100%;
+    margin: 25px 25px 20px 0px;
+}
+  
+.login {
+    color: #FFF;
+}
+  
+.login:hover {
+    color: #99ccff;
+}
+  
+.fa-bars {
+    background-color: green;
+    border: none;
+    color: #FFF;
+}
+
+.fa-bars:hover {
+    color: #99ccff;
+}
+  
+.logo-image {
+    width: 90px;
+    padding: 15px 0px 0px 25px;
+    border-radius: 50%;
+}
+  
+.center-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Drawer Items */
+
+.drawer-nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.drawer-nav-links a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+  
+.drawer-login-btn-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  
+.drawer-login-btn-group ul{
+    list-style: none;
+    padding: 0px;
+}
+  
+.drawer-login-btn-group ul li {
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}

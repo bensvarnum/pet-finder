@@ -1,4 +1,5 @@
-import Navbar from './Navbar';
-import Landing from './Landing';
+import PostCard from './PostCard/PostCard';
+import Navbar from './navbar/Navbar';
+import Footer from './footer/Footer';
 
-export { Navbar, Landing };
+export { Navbar, Footer, PostCard };
