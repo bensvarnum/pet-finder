@@ -1,7 +1,9 @@
+import { Navbar, Footer } from "./components";
+import { Landing } from "./pages";
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
-import { Navbar, Landing } from "./components";
-import PetForm from "./components/PetForm";
+import "antd/dist/antd.css";
+import "font-awesome/css/font-awesome.min.css";
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
         <Landing />
         <PetForm />
       </body>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
