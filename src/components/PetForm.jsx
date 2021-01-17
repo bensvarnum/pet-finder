@@ -5,9 +5,10 @@ import "./PetForm.css";
 
 function PetForm() {
   const [petName, showPetName] = useState(false);
-
+  const [otherInput, showOtherInput] = useState(false);
   const [petNameInput, setPetNameInput] = useState("");
   const [furColorChoice, setFurColorChoice] = useState("white");
+  const [otherColor, setOtherColor] = useState("");
   const [petSize, setPetSize] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
@@ -24,7 +25,13 @@ function PetForm() {
   };
 
   const handleColorChoice = (e) => {
+    // const choice = e.target.value === "other" ? "" : e.target.value;
+
     setFurColorChoice(e.target.value);
+  };
+
+  const otherColorChoice = (e) => {
+    setOtherColor(e.target.value);
   };
 
   const handleSizeChange = (e) => {
@@ -53,7 +60,10 @@ function PetForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(image);
+    console.log(otherColor);
+    console.log(furColorChoice);
   };
+
   const lostToggler = () => {
     showPetName(!petName);
   };
@@ -73,7 +83,7 @@ function PetForm() {
           </p>
         </div>
         <div className="form__input">
-          <Form onSubmit={handleSubmit} inverted>
+          <Form onSubmit={handleSubmit} encType="multpart/form-data" inverted>
             <Form.Group>
               <Form.Field
                 label="Lost"
@@ -115,17 +125,22 @@ function PetForm() {
                 <option value="blonde">Blonde</option>
                 <option value="other">Other</option>
               </Form.Field>
-              {furColorChoice === "other" && (
-                <Form.Group>
-                  <Form.Input
-                    type="text"
-                    label="Other Fur Color"
-                    placeholder="Fur Color"
-                    value={furColorChoice}
-                    onChange={handleColorChoice}
-                  />
-                </Form.Group>
-              )}
+
+              {furColorChoice !== "white" &&
+                furColorChoice !== "black" &&
+                furColorChoice !== "brown" &&
+                furColorChoice !== "blonde" && (
+                  <Form.Group>
+                    <Form.Input
+                      type="text"
+                      label="Other Fur Color"
+                      placeholder="Fur Color"
+                      value={otherColor}
+                      // {furColorChoice === "other" ? "" : furColorChoice}
+                      onChange={otherColorChoice}
+                    />
+                  </Form.Group>
+                )}
             </Form.Group>
             <Form.Group inline>
               <label>Size</label>
