@@ -10,14 +10,14 @@ function App() {
   return (
     <div className="App">
       <header></header>
-      <body>
-        <Navbar />
-        <Landing />
-        <PetForm />
-      </body>
-      {/* <footer>
+
+      <Navbar />
+      <Landing />
+      <PetForm />
+
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </div>
   );
 }

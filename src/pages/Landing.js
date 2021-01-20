@@ -1,7 +1,7 @@
 import React from "react";
-import { PostCard } from '../components';
-import styled from 'styled-components';
-import fetch from 'node-fetch';
+// import { PostCard } from '../components';
+import styled from "styled-components";
+// import fetch from 'node-fetch';
 
 const CardContainer = styled.div`
   display: flex;
@@ -9,15 +9,11 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-
 function Landing() {
-  
-
   return (
     <div>
       <h3>Landing Page</h3>
-      <CardContainer>
-      </CardContainer>
+      <CardContainer></CardContainer>
     </div>
   );
 }
