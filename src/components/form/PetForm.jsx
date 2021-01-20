@@ -72,7 +72,7 @@ function PetForm() {
       image,
     };
     axios
-      .post("http://localhost:3001/posts/add", { form })
+      .post("http://localhost:9000/posts/add", { form })
       .then((res) => {
         console.log(res);
         console.log(res.data);
@@ -101,7 +101,7 @@ function PetForm() {
         </p>
       </div>
       <div className="form__input">
-        <Form onSubmit={handleSubmit} encType="multpart/form-data">
+        <Form onSubmit={handleSubmit} encType="multipart/form-data">
           <Form.Group>
             <Form.Field
               label="Lost"
@@ -208,14 +208,14 @@ function PetForm() {
           </Form.Group>
           <Form.Group>
             <Form.Input
-              type="tel"
+              type="text"
               label="Phone Number"
               placeholder="Phone Number"
               id="phone"
               name="phone"
               value={phoneNumber}
               onChange={handlePhoneNumber}
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             />
           </Form.Group>
           <Form.Group>

@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf dist/ && ng build && cpx -C \"dist/fullstory-ng-test/**\" \"src/server/public/\" ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
