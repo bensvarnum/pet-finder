@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
 
 const PostCard = (props) => {
   const Title = styled.h1`
-    color: ${props.PostTypeId === "1" ? "green" : "red"};
+    color: ${props.PostTypeId === "1" ? "red" : "green"};
     font-weight: 900;
   `;
 
@@ -25,7 +25,7 @@ const PostCard = (props) => {
       <Card>
         <Card.Content>
           <Card.Header>
-            <Title>{props.PostTypeId === "1" ? "Found" : "Lost"}</Title>
+            <Title>{props.PostTypeId === "1" ? "Lost" : "Found"}</Title>
             <Image src={props.img} alt="lost pet" />
           </Card.Header>
           <Info>

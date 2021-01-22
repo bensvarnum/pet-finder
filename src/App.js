@@ -12,8 +12,6 @@ function App() {
       <header></header>
 
       <Navbar />
-      <Landing />
-      <PetForm />
 
       <footer>
         <Footer />

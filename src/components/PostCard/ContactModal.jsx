@@ -13,7 +13,7 @@ const ContactModal = (props) => {
     <Modal
       trigger={
         <ButtonContainer>
-          <Button basic color={props.PostTypeId === "1" ? "green" : "red"}>
+          <Button basic color={props.PostTypeId === "1" ? "red" : "green"}>
             Contact Me!
           </Button>
         </ButtonContainer>

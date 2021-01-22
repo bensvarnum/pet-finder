@@ -1,3 +1,4 @@
-import Landing from './Landing';
+import Landing from "./Landing";
+import FoundOnly from "./FoundOnly";
 
-export { Landing }
+export { Landing, FoundOnly };
