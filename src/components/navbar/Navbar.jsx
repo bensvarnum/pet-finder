@@ -62,17 +62,6 @@ const Navbar = () => {
             <LogoutButton />
           </div>
         </div>
-        {/* <div className="drawer-login-btn-group">
-          <h3>Login</h3>
-          <ul>
-            <li>
-              <Button type="primary">Facebook</Button>
-            </li>
-            <li>
-              <Button type="primary">Google</Button>
-            </li>
-          </ul>
-        </div> */}
       </Drawer>
     </>
   );
