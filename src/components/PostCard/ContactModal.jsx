@@ -9,11 +9,12 @@ const ButtonContainer = styled.div`
   }
 `;
 const ContactModal = (props) => {
+  console.log(props);
   return (
     <Modal
       trigger={
         <ButtonContainer>
-          <Button basic color={props.PostTypeId === "1" ? "red" : "green"}>
+          <Button basic color={props.PostTypeId === 1 ? "red" : "green"}>
             Contact Me!
           </Button>
         </ButtonContainer>

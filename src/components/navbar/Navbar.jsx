@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Landing, FoundOnly } from "../../pages";
+import { Landing, FoundOnly, LostOnly } from "../../pages";
 import { Drawer, Button } from "antd";
 import "./navbar.css";
 
@@ -34,9 +34,7 @@ const Navbar = () => {
             src="./img/dog-bone-logo.png"
             alt="dog bone"
           />
-          <a className="found" href="/">
-            Lost Pets
-          </a>
+          <Link to="lostonly">Lost Pets</Link>
         </div>
         <div className="login-button">
           <button className="fa fa-bars fa-2x" onClick={showDrawer}></button>
@@ -79,6 +77,9 @@ const Navbar = () => {
         </Route>
         <Route path="/foundonly">
           <FoundOnly />
+        </Route>
+        <Route path="/lostonly">
+          <LostOnly />
         </Route>
       </Switch>
     </Router>
