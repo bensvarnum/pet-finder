@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Landing, FoundOnly, LostOnly } from "../../pages";
-import { Drawer, Button } from "antd";
+import { Drawer } from "antd";
+import LoginButton from "../authButtons/LoginButton";
+import LogoutButton from "../authButtons/LogoutButton";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -56,18 +58,9 @@ const Navbar = () => {
             <a className="found" href="/">
               Found Pets
             </a>
+            <LoginButton />
+            <LogoutButton />
           </div>
-        </div>
-        <div className="drawer-login-btn-group">
-          <h3>Login</h3>
-          <ul>
-            <li>
-              <Button type="primary">Facebook</Button>
-            </li>
-            <li>
-              <Button type="primary">Google</Button>
-            </li>
-          </ul>
         </div>
       </Drawer>
 
