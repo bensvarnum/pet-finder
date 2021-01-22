@@ -1,4 +1,4 @@
-import { Navbar, Footer, PetForm } from "./components";
+import { Navbar, Footer, PetForm, PostCard } from "./components";
 import { Landing } from "./pages";
 
 import "./App.css";
@@ -12,8 +12,11 @@ function App() {
       <header></header>
 
       <Navbar />
-      <Landing />
-      <PetForm />
+      {/* <Landing />
+      <PetForm /> */}
+      <PostCard />
+      <PostCard />
+      <PostCard />
 
       <footer>
         <Footer />
