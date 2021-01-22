@@ -35,9 +35,9 @@ const FoundOnly = () => {
           color={pet.color}
           size={pet.size}
           location={pet.location}
-          name={pet.petName ? pet.Name : ""}
-          email={pet.email ? pet.email : ""}
-          phoneNumber={pet.phoneNumber ? pet.phoneNumber : ""}
+          name={pet.petName}
+          email={pet.email}
+          phoneNumber={pet.phoneNumber}
         />
       ))
     );
