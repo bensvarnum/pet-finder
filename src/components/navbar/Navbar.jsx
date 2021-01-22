@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Landing, FoundOnly, LostOnly } from "../../pages";
 import { Drawer } from "antd";
-import LoginButton from '../authButtons/LoginButton';
-import LogoutButton from '../authButtons/LogoutButton';
+import LoginButton from "../authButtons/LoginButton";
+import LogoutButton from "../authButtons/LogoutButton";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -16,27 +18,25 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <Router>
       <div className="navbar" id="navbar">
         <div className="logo">
-          <img
-            className="logo-image"
-            src="./img/pets-logo.png"
-            alt="pet logo"
-          />
+          <Link to="/">
+            <img
+              className="logo-image"
+              src="./img/pets-logo.png"
+              alt="pet logo"
+            />
+          </Link>
         </div>
         <div className="nav-name">
-          <a className="lost" href="/">
-            Lost Pets
-          </a>
+          <Link to="/foundonly">Found Pets</Link>
           <img
             className="center-logo"
             src="./img/dog-bone-logo.png"
             alt="dog bone"
           />
-          <a className="found" href="/">
-            Found Pets
-          </a>
+          <Link to="lostonly">Lost Pets</Link>
         </div>
         <div className="login-button">
           <button className="fa fa-bars fa-2x" onClick={showDrawer}></button>
@@ -63,7 +63,19 @@ const Navbar = () => {
           </div>
         </div>
       </Drawer>
-    </>
+
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route path="/foundonly">
+          <FoundOnly />
+        </Route>
+        <Route path="/lostonly">
+          <LostOnly />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
