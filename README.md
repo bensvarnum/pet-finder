@@ -166,9 +166,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-- Benjamin Varnum - [@your_twitter](https://twitter.com/your_username) - email@example.com
-- John Lofton - [@your_twitter](https://twitter.com/your_username) - email@example.com
-- Daniel Gallagher - [@your_twitter](https://twitter.com/your_username) - email@example.com
+- Benjamin Varnum - [GitHub](https://github.com/bensvarnum) - [LinkedIn](https://www.linkedin.com/in/benjamin-varnum-893b0b1ab/)
+- John Lofton - [GitHub](https://github.com/JohnLoftin) - [LinkedIn](https://www.linkedin.com/in/john-loftin-1a35091b3/)
+- Daniel Gallagher - [GitHub](https://github.com/DanielBGallagher) - [LinkedIn](https://www.linkedin.com/in/daniel-gallagher-b133b51b2/)
 
 Project Link: [https://github.com/bensvarnum/pet-finder](https://github.com/bensvarnum/pet-finder)
 
@@ -176,16 +176,8 @@ Project Link: [https://github.com/bensvarnum/pet-finder](https://github.com/bens
 
 ## Acknowledgements
 
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [Loaders.css](https://connoratherton.com/loaders)
 - [Semantic UI React](https://react.semantic-ui.com/)
 - [Ant Design of React](https://ant.design/docs/react/introduce)
-- [Sticky Kit](http://leafo.net/sticky-kit)
-- [JVectorMap](http://jvectormap.com)
 - [Font Awesome](https://fontawesome.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
