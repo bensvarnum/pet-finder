@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import styled from "styled-components";
-import ContactModal from "./ContactModal";
+import ContactModal from "./ContactModal"; 
 
 const Info = styled.div`
   display: flex;

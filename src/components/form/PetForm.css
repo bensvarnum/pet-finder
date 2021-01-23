@@ -7,7 +7,7 @@
   margin: auto;
   border-radius: 5px;
   padding: 5px;
-  /* margin-bottom: 100px; */
+  margin-bottom: 50px;
 }
 
 .form__header {
@@ -15,8 +15,6 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .form__dropdown {
