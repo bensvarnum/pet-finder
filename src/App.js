@@ -1,5 +1,6 @@
-import { Navbar, Footer, PetForm } from "./components";
+import { Navbar, Footer, PetForm, PostCard } from "./components";
 import { Landing } from "./pages";
+import PdfForm from "./components/PDF/PdfForm";
 
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
@@ -13,9 +14,9 @@ function App() {
 
       <Navbar />
 
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </div>
   );
 }
