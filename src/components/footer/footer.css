@@ -1,7 +1,5 @@
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: sticky;
     width: 100%;
     align-items: center;
     background-color: green;
