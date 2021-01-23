@@ -13,9 +13,6 @@ function App() {
       <header></header>
 
       <Navbar />
-      {/* <Landing />
-      <PetForm /> */}
-      <PdfForm />
 
       {/* <footer>
         <Footer />
