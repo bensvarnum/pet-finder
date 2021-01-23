@@ -99,4 +99,10 @@
 
 .drawer-nav-links button {
     margin-top: 20px;
+    width: 65%;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
 }

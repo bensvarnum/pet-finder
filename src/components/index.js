@@ -3,5 +3,6 @@ import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 import PetForm from "./form/PetForm";
 import LoginButton from "./authButtons/LoginButton";
+import LogoutButton from "./authButtons/LogoutButton";
 
-export { Navbar, Footer, PostCard, PetForm, LoginButton };
+export { Navbar, Footer, PostCard, PetForm, LoginButton, LogoutButton };

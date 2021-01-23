@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
+import CreateAPoster from '../authButtons/CreateAPoster';
 import LoginButton from '../authButtons/LoginButton';
 import LogoutButton from '../authButtons/LogoutButton';
+import MakeAPostButton from '../authButtons/MakeAPostButton';
 import "./navbar.css";
 
 const Navbar = () => {
@@ -19,11 +21,13 @@ const Navbar = () => {
     <>
       <div className="navbar" id="navbar">
         <div className="logo">
-          <img
-            className="logo-image"
-            src="./img/pets-logo.png"
-            alt="pet logo"
-          />
+          <a href="/">
+            <img
+              className="logo-image"
+              src="./img/pets-logo.png"
+              alt="pet logo"
+            />
+          </a>
         </div>
         <div className="nav-name">
           <a className="lost" href="/">
@@ -52,14 +56,21 @@ const Navbar = () => {
         <div className="drawer-nav-links">
           <h3>Search Categories</h3>
           <div className="drawer-nav-link-group">
+            <a className="home" href="/">
+              Home
+            </a>
             <a className="lost" href="/">
               Lost Pets
             </a>
             <a className="found" href="/">
               Found Pets
             </a>
-            <LoginButton />
-            <LogoutButton />
+            <div className="auth-buttons">
+                <CreateAPoster />
+                <MakeAPostButton />
+                <LoginButton />
+                <LogoutButton />
+            </div>   
           </div>
         </div>
       </Drawer>
