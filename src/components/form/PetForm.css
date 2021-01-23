@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 100%;
   margin: auto;
-  background-color: #348498;
   border-radius: 5px;
   padding: 5px;
+  margin-bottom: 50px;
 }
 
 .form__header {
@@ -15,14 +15,25 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .form__dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.form__button {
+  margin: 20px;
+}
+
+.form__button button {
+  background-color: #99ccff !important;
+  color: #FFF !important;
+}
+
+.form__button button:hover {
+  opacity: 80%;
 }
 
 .autocomplete-dropdown-container {

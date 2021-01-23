@@ -94,21 +94,15 @@
     display: block;
     text-decoration: none;
     color: black;
+    padding: 10px;
 }
-  
-.drawer-login-btn-group {
+
+.drawer-nav-links button {
+    margin-top: 10px;
+    width: 65%;
+}
+
+.auth-buttons {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    flex-wrap: wrap;
-}
-  
-.drawer-login-btn-group ul{
-    list-style: none;
-    padding: 0px;
-}
-  
-.drawer-login-btn-group ul li {
-    padding: 10px 0px 10px 0px;
-    width: 50%;
 }
