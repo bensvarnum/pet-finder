@@ -28,19 +28,19 @@
     <img src="./public/img/dog-bone-logo.png" alt="Logo" width="" height="">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Pet-Finder App</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/bensvarnum/pet-finder/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/bensvarnum/pet-finder/issues">Request Feature</a>
   </p>
 </p>
 
@@ -92,9 +92,11 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
-- [Laravel](https://laravel.com)
+- [React](https://reactjs.org/)
+- [Auth0-React](https://www.npmjs.com/package/@auth0/auth0-react)
+- [Sequelize-ORM](https://sequelize.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Axios](https://www.npmjs.com/package/axios)
 
 <!-- GETTING STARTED -->
 
@@ -164,9 +166,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+- Benjamin Varnum - [@your_twitter](https://twitter.com/your_username) - email@example.com
+- John Lofton - [@your_twitter](https://twitter.com/your_username) - email@example.com
+- Daniel Gallagher - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/bensvarnum/pet-finder](https://github.com/bensvarnum/pet-finder)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -178,8 +182,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 - [GitHub Pages](https://pages.github.com)
 - [Animate.css](https://daneden.github.io/animate.css)
 - [Loaders.css](https://connoratherton.com/loaders)
-- [Slick Carousel](https://kenwheeler.github.io/slick)
-- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Semantic UI React](https://react.semantic-ui.com/)
+- [Ant Design of React](https://ant.design/docs/react/introduce)
 - [Sticky Kit](http://leafo.net/sticky-kit)
 - [JVectorMap](http://jvectormap.com)
 - [Font Awesome](https://fontawesome.com)
