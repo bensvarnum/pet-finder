@@ -7,6 +7,10 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+
+  p > span {
+    font-weight: bold;
+  }
 `;
 const CardWrapper = styled.div`
   padding: 5px;
@@ -14,27 +18,35 @@ const CardWrapper = styled.div`
   margin-right: 10px;
 `;
 
-const PostCard = (props) => {
-  const Title = styled.h1`
-    color: ${props.PostTypeId === "1" ? "green" : "red"};
-    font-weight: 900;
-  `;
+const Title = styled.h1`
+  font-weight: 900;
+  color: ${(props) => props.color};
+`;
 
+const PostCard = (props) => {
   return (
     <CardWrapper>
       <Card>
         <Card.Content>
           <Card.Header>
-            <Title>{props.PostTypeId === "1" ? "Found" : "Lost"}</Title>
+            <Title color={props.PostTypeId === 1 ? "red" : "green"}>
+              {props.PostTypeId === 1 ? "Lost" : "Found"}
+            </Title>
             <Image src={props.img} alt="lost pet" />
           </Card.Header>
           <Info>
             <h3>{props.name}</h3>
-            <p>{props.color}</p>
-            <p>{props.size}</p>
+            <p>
+              <span>Color: </span>
+              {props.color}
+            </p>
+            <p>
+              <span>Size: </span>
+              {props.size}
+            </p>
             <p>
               <span>
-                {props.PostTypeId === "1" ? "Found At: " : "Last Seen: "}{" "}
+                {props.PostTypeId === 1 ? "Last Seen: " : "Found at: "}
               </span>
               {props.location}
             </p>

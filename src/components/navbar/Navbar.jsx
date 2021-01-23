@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { Drawer } from "antd";
-import CreateAPoster from '../authButtons/CreateAPoster';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Landing, FoundOnly, LostOnly } from "../../pages";
+import PdfForm from "../PDF/PdfForm";
+import PetForm from "../form/PetForm";
+import { Drawer, Button } from "antd";
 import LoginButton from '../authButtons/LoginButton';
 import LogoutButton from '../authButtons/LogoutButton';
 import MakeAPostButton from '../authButtons/MakeAPostButton';
@@ -18,29 +21,25 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <Router>
       <div className="navbar" id="navbar">
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <img
               className="logo-image"
               src="./img/pets-logo.png"
               alt="pet logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="nav-name">
-          <a className="lost" href="/">
-            Lost Pets
-          </a>
+          <Link to="/foundonly">Found Pets</Link>
           <img
             className="center-logo"
             src="./img/dog-bone-logo.png"
             alt="dog bone"
           />
-          <a className="found" href="/">
-            Found Pets
-          </a>
+          <Link to="lostonly">Lost Pets</Link>
         </div>
         <div className="login-button">
           <button className="fa fa-bars fa-2x" onClick={showDrawer}></button>
@@ -57,24 +56,48 @@ const Navbar = () => {
           <h3>Search Categories</h3>
           <div className="drawer-nav-link-group">
             <a className="home" href="/">
-              Home
+              Home  
             </a>
-            <a className="lost" href="/">
+            <a className="lost" href="/lostonly">
               Lost Pets
             </a>
-            <a className="found" href="/">
+            <a className="found" href="/foundonly">
               Found Pets
             </a>
             <div className="auth-buttons">
-                <CreateAPoster />
+              <Link to="/createpdf">
+                <Button>
+                  Create Poster
+                </Button>
+              </Link>
+              <Link to="/petform">
                 <MakeAPostButton />
-                <LoginButton />
-                <LogoutButton />
-            </div>   
+              </Link>
+              <LoginButton />
+              <LogoutButton />
+            </div>
           </div>
         </div>
       </Drawer>
-    </>
+
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route path="/foundonly">
+          <FoundOnly />
+        </Route>
+        <Route path="/lostonly">
+          <LostOnly />
+        </Route>
+        <Route path="/createpdf">
+          <PdfForm />
+        </Route>
+        <Route path="/petform">
+          <PetForm />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
