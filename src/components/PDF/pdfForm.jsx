@@ -1,33 +1,8 @@
 import React, { useState } from "react";
-
 import PDF from "./PDF";
 import { Form, Input, Button } from "antd";
-
 import ImageUploading from "react-images-uploading";
-// import ImageUploader from "react-images-upload";
-
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-
-// const normFile = (e) => {
-//   console.log("Upload event:", e);
-//   if (Array.isArray(e)) {
-//     return e;
-//   }
-//   return e && e.fileList;
-// };
+import "./pdfForm.css";
 
 function PdfForm() {
   const [form] = Form.useForm();
@@ -78,12 +53,7 @@ function PdfForm() {
           <div className="poster__header">
             <h1>Fill out form to generate a pdf to print</h1>
           </div>
-          <Form
-            {...layout}
-            form={form}
-            name="control-hooks"
-            onFinish={onFinish}
-          >
+          <Form form={form} name="control-hooks" onFinish={onFinish}>
             <Form.Item
               name="name"
               label="Pet Name"
@@ -165,59 +135,62 @@ function PdfForm() {
                 onChange={handleDecriptionChange}
               />
             </Form.Item>
-            <div>
-              <ImageUploading
-                multiple
-                value={images}
-                onChange={handleImage}
-                maxNumber={maxNumber}
-                dataURLKey="data_url"
-              >
-                {({
-                  imageList,
-                  onImageUpload,
-                  onImageRemoveAll,
-                  onImageUpdate,
-                  onImageRemove,
-                  isDragging,
-                  dragProps,
-                }) => (
-                  // write your building UI
-                  <div className="upload__image-wrapper">
-                    <button
-                      style={isDragging ? { color: "red" } : undefined}
-                      onClick={onImageUpload}
-                      {...dragProps}
-                    >
-                      Click or Drop here
-                    </button>
-                    &nbsp;
-                    <button onClick={onImageRemoveAll}>
-                      Remove all images
-                    </button>
-                    {imageList.map((image, index) => (
-                      <div key={index} className="image-item">
-                        <img src={image["data_url"]} alt="" width="100" />
-                        <div className="image-item__btn-wrapper">
-                          <button onClick={() => onImageUpdate(index)}>
-                            Update
-                          </button>
-                          <button onClick={() => onImageRemove(index)}>
-                            Remove
-                          </button>
+            <div className="button__group">
+              <div className="img__upload">
+                <ImageUploading
+                  multiple
+                  value={images}
+                  onChange={handleImage}
+                  maxNumber={maxNumber}
+                  dataURLKey="data_url"
+                >
+                  {({
+                    imageList,
+                    onImageUpload,
+                    onImageRemoveAll,
+                    onImageUpdate,
+                    onImageRemove,
+                    isDragging,
+                    dragProps,
+                  }) => (
+                    // write your building UI
+                    <div className="upload__image-wrapper">
+                      <button
+                        style={isDragging ? { color: "red" } : undefined}
+                        onClick={onImageUpload}
+                        {...dragProps}
+                      >
+                        Click or Drop here
+                      </button>
+                      &nbsp;
+                      <button onClick={onImageRemoveAll}>
+                        Remove all images
+                      </button>
+                      {imageList.map((image, index) => (
+                        <div key={index} className="image-item">
+                          <img src={image["data_url"]} alt="" width="100" />
+                          <div className="image-item__btn-wrapper">
+                            <button onClick={() => onImageUpdate(index)}>
+                              Update
+                            </button>
+                            <button onClick={() => onImageRemove(index)}>
+                              Remove
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </ImageUploading>
+                      ))}
+                    </div>
+                  )}
+                </ImageUploading>
+              </div>
+              <div className="form__button">
+                <Form.Item>
+                  <Button type="primary" htmlType="submit">
+                    Submit
+                  </Button>
+                </Form.Item>
+              </div>
             </div>
-
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
           </Form>
         </div>
       ) : (

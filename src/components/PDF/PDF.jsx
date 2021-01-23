@@ -10,23 +10,23 @@ const PDF = (props) => {
 
   return (
     <>
-      <div className="view" ref={ref}>
-        <div className="view__header">
-          <h1 className="lost__logo">Lost Pet</h1>
+      <div className="pdf__view" ref={ref}>
+        <div className="pdf__header">
+          <h1 className="pdf__logo">Lost Pet</h1>
         </div>
-        <div className="view__image">
+        <div className="pdf__image">
           <img src={props.images[0].data_url} alt={props.name} />
         </div>
-        <div className="view__image">
-          <div className="view__input">
+        <div className="pdf__info">
+          <div className="pdf__input">
             <h3>Name: {props.name}</h3>
             <h3>Fur Color: {props.color}</h3>
             <h3>Size: {props.size}</h3>
             <h3>Last Seen: {props.location}</h3>
             <h3>Description: {props.description}</h3>
           </div>
-          <div className="view__contact">
-            <h3>Contact Phone Number: {props.number}</h3>
+          <div className="pdf__contact">
+            <h3>Contact #: {props.number}</h3>
             <h3>Email: {props.email}</h3>
           </div>
         </div>

@@ -1,16 +1,37 @@
-.view {
+.pdf__view {
   max-width: 800px;
+
   width: 100%;
   display: table;
   margin: 0 auto;
-  padding: 20px 50px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-img {
+.pdf__info {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.pdf__image img {
   width: 300px;
 }
-h3 {
+.pdf__input h3 {
   font-size: 20px;
 }
-.lost__logo {
+.pdf__input {
+  padding-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pdf__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.pdf__logo {
   font-size: 100px;
 }
