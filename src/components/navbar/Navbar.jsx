@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Landing, FoundOnly, LostOnly } from "../../pages";
+import PdfForm from "../PDF/PdfForm";
+import PetForm from "../form/PetForm";
 import { Drawer } from "antd";
 import LoginButton from "../authButtons/LoginButton";
 import LogoutButton from "../authButtons/LogoutButton";
@@ -52,11 +54,17 @@ const Navbar = () => {
         <div className="drawer-nav-links">
           <h3>Search Categories</h3>
           <div className="drawer-nav-link-group">
-            <a className="lost" href="/">
+            <a className="lost" href="/lostonly">
               Lost Pets
             </a>
-            <a className="found" href="/">
+            <a className="found" href="/foundonly">
               Found Pets
+            </a>
+            <a className="pdf__link" href="/createpdf">
+              Create Lost Poster
+            </a>
+            <a className="pet__form" href="/petform">
+              Post Pet Lost/Found
             </a>
             <LoginButton />
             <LogoutButton />
@@ -73,6 +81,12 @@ const Navbar = () => {
         </Route>
         <Route path="/lostonly">
           <LostOnly />
+        </Route>
+        <Route path="/createpdf">
+          <PdfForm />
+        </Route>
+        <Route path="/petform">
+          <PetForm />
         </Route>
       </Switch>
     </Router>
