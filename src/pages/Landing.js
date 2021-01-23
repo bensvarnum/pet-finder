@@ -45,7 +45,7 @@ const Landing = () => {
   return (
     <>
       <h1>All Pets</h1>
-      <CardContainer>{petCards}</CardContainer>;
+      <CardContainer>{petCards}</CardContainer>
     </>
   );
 };

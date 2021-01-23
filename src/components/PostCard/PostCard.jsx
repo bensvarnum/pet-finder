@@ -7,6 +7,10 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+
+  p > span {
+    font-weight: bold;
+  }
 `;
 const CardWrapper = styled.div`
   padding: 5px;
@@ -32,8 +36,14 @@ const PostCard = (props) => {
           </Card.Header>
           <Info>
             <h3>{props.name}</h3>
-            <p>{props.color}</p>
-            <p>{props.size}</p>
+            <p>
+              <span>Color: </span>
+              {props.color}
+            </p>
+            <p>
+              <span>Size: </span>
+              {props.size}
+            </p>
             <p>
               <span>
                 {props.PostTypeId === 1 ? "Last Seen: " : "Found at: "}
