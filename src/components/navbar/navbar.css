@@ -98,5 +98,11 @@
 }
 
 .drawer-nav-links button {
-    margin-top: 20px;
+    margin-top: 10px;
+    width: 65%;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
 }

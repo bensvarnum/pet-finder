@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PostCard, PetForm } from "../components";
+import { PostCard } from "../components";
 import styled from "styled-components";
 import axios from "axios";
 require("dotenv");
@@ -45,8 +45,7 @@ const FoundOnly = () => {
   return (
     <>
       <h1>Found Pets</h1>
-      {/* <CardContainer>{petCards}</CardContainer>; */}
-      <PetForm />
+      <CardContainer>{petCards}</CardContainer>;
     </>
   );
 };
