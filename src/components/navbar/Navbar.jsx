@@ -48,7 +48,7 @@ const Navbar = () => {
       <Drawer
         title="Navigation"
         placement="left"
-        closable={true}
+        closable={false}
         onClose={onClose}
         visible={visible}
       >
