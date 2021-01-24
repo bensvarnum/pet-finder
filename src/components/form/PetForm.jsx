@@ -9,7 +9,7 @@ function PetForm() {
 
   const [petNameInput, setPetNameInput] = useState("");
   const [furColorChoice, setFurColorChoice] = useState("white");
-
+  const [postTypeId, setPostTypeId] = useState();
   const [petSize, setPetSize] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
@@ -62,6 +62,7 @@ function PetForm() {
     e.preventDefault();
 
     const form = {
+      postTypeId,
       color: furColorChoice,
       size: petSize,
       location,
@@ -85,10 +86,12 @@ function PetForm() {
 
   const lostToggler = () => {
     showPetName(!petName);
+    setPostTypeId(1);
   };
 
   const resetToggler = () => {
     showPetName(false);
+    setPostTypeId(2);
   };
 
   return (
