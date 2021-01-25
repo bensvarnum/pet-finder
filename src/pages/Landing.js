@@ -18,10 +18,11 @@ const Landing = () => {
 
   useEffect(() => {
     async function fetchData() {
-      await axios.get("http://localhost:9000/posts/all").then((res) => {
-        console.log(res.data);
-        setAllPets(res.data);
-      });
+      await axios
+        .get("https://pet-finder-backend.herokuapp.com/posts/all")
+        .then((res) => {
+          setAllPets(res.data);
+        });
     }
     fetchData();
   }, []);
