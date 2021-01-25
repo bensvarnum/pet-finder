@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "semantic-ui-react";
 import PlacesAutocomplete from "react-places-autocomplete";
+import { notification, Space } from "antd";
 import axios from "axios";
 import "./PetForm.css";
 
@@ -16,6 +17,14 @@ function PetForm() {
   const [notes, setNotes] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState({ file: null });
+
+  const openNotificationWithIcon = (type) => {
+    notification[type]({
+      message: "Submission Success!",
+      description:
+        "Your post as been added to our database. Our users will be on the look out!",
+    });
+  };
 
   const onHandleChange = (e) => {
     setPetNameInput(e.target.value);
@@ -75,13 +84,11 @@ function PetForm() {
     axios
       .post("https://pet-finder-backend.herokuapp.com/posts/add", { form })
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        openNotificationWithIcon("success");
       })
       .catch((err) => {
         console.log(err);
       });
-    console.log(form);
   };
 
   const lostToggler = () => {
