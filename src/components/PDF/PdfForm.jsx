@@ -41,8 +41,7 @@ function PdfForm() {
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-  const onFinish = (values) => {
-    console.log(values);
+  const onFinish = () => {
     setHide(true);
   };
 
