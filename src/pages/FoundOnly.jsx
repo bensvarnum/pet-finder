@@ -48,7 +48,6 @@ const FoundOnly = () => {
   return (
     <>
       <h1>Found Pets</h1>
-      <PetForm></PetForm>
       <CardContainer>{petCards}</CardContainer>;
     </>
   );
