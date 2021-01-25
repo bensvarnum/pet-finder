@@ -10,7 +10,7 @@ function PetForm() {
   const [petNameInput, setPetNameInput] = useState("");
   const [furColorChoice, setFurColorChoice] = useState("white");
   const [postTypeId, setPostTypeId] = useState();
-  const [petSize, setPetSize] = useState("");
+  const [petSize, setPetSize] = useState("small");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
@@ -26,14 +26,8 @@ function PetForm() {
   };
 
   const handleColorChoice = (e) => {
-    // const choice = e.target.value === "other" ? "" : e.target.value;
-
     setFurColorChoice(e.target.value);
   };
-
-  // const otherColorChoice = (e) => {
-  //   setOtherColor(e.target.value);
-  // };
 
   const handleSizeChange = (e) => {
     setPetSize(e.target.value);
@@ -74,14 +68,8 @@ function PetForm() {
     };
     axios
       .post("https://pet-finder-backend.herokuapp.com/posts/add", { form })
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    console.log(form);
+      .then((res) => {})
+      .catch((err) => {});
   };
 
   const lostToggler = () => {

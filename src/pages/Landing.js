@@ -18,12 +18,10 @@ const Landing = () => {
 
   useEffect(() => {
     async function fetchData() {
-      await axios
-        .get("https://pet-finder-backend.herokuapp.com/posts/unresolved/20")
-        .then((res) => {
-          console.log(res.data);
-          setAllPets(res.data);
-        });
+      await axios.get("http://localhost:9000/posts/all").then((res) => {
+        console.log(res.data);
+        setAllPets(res.data);
+      });
     }
     fetchData();
   }, []);
@@ -37,6 +35,8 @@ const Landing = () => {
           color={pet.color}
           size={pet.size}
           location={pet.location}
+          description={pet.description}
+          url={pet.url}
           name={pet.petName}
           email={pet.email}
           phoneNumber={pet.phoneNumber}
