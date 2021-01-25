@@ -11,7 +11,7 @@ function PetForm() {
   const [petNameInput, setPetNameInput] = useState("");
   const [furColorChoice, setFurColorChoice] = useState("white");
   const [postTypeId, setPostTypeId] = useState();
-  const [petSize, setPetSize] = useState("");
+  const [petSize, setPetSize] = useState("small");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
@@ -38,14 +38,8 @@ function PetForm() {
   };
 
   const handleColorChoice = (e) => {
-    // const choice = e.target.value === "other" ? "" : e.target.value;
-
     setFurColorChoice(e.target.value);
   };
-
-  // const otherColorChoice = (e) => {
-  //   setOtherColor(e.target.value);
-  // };
 
   const handleSizeChange = (e) => {
     setPetSize(e.target.value);

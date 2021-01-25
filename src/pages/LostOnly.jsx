@@ -21,7 +21,6 @@ const LostOnly = () => {
       await axios
         .get("https://pet-finder-backend.herokuapp.com/posts/lost/20")
         .then((res) => {
-          console.log(res.data);
           setLostPets(res.data);
         });
     }
@@ -37,6 +36,8 @@ const LostOnly = () => {
           color={pet.color}
           size={pet.size}
           location={pet.location}
+          url={pet.url}
+          description={pet.description}
           name={pet.petName}
           email={pet.email}
           phoneNumber={pet.phoneNumber}

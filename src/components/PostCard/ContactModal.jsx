@@ -9,7 +9,6 @@ const ButtonContainer = styled.div`
   }
 `;
 const ContactModal = (props) => {
-  console.log(props);
   return (
     <Modal
       trigger={
