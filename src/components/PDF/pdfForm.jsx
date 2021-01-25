@@ -49,7 +49,7 @@ function PdfForm() {
   return (
     <>
       {!show ? (
-        <div className="container-pdf">
+        <div className="container">
           <div className="poster__header">
             <h1>Fill out form to generate a pdf to print</h1>
           </div>

@@ -1,28 +1,32 @@
-.container-pdf {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  /* padding: 20px; */
+  width: 80%;
+  margin: auto;
+  padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 100px;
 }
 
-/* .container-pdf .ant-form-item-control-input {
-  width: 200px;
-} */
+.container input,
+.container textarea {
+  width: 250px;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.pdf-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container label {
+  margin-right: auto;
   align-items: center;
-  width: 100%;
 }
 
 .form__button {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 5px;
 }
 
@@ -33,6 +37,23 @@
   align-items: baseline;
 }
 
+.upload__image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ant-row {
+  width: 50%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.ant-form-item {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .poster__header {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
