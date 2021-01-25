@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "semantic-ui-react";
 import PlacesAutocomplete from "react-places-autocomplete";
-import { notification, Space } from "antd";
+import { notification } from "antd";
 import axios from "axios";
 import "./PetForm.css";
 
@@ -24,6 +24,9 @@ function PetForm() {
       description:
         "Your post as been added to our database. Our users will be on the look out!",
     });
+    setTimeout(function () {
+      window.location = "/";
+    }, 4000);
   };
 
   const onHandleChange = (e) => {
