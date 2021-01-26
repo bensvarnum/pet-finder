@@ -48,7 +48,7 @@ const FoundOnly = () => {
   return (
     <>
       <h1>Found Pets</h1>
-      <CardContainer>{petCards}</CardContainer>;
+      <CardContainer>{petCards}</CardContainer>
     </>
   );
 };

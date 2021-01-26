@@ -48,7 +48,7 @@ const LostOnly = () => {
   return (
     <>
       <h1>Lost Pets</h1>
-      <CardContainer>{petCards}</CardContainer>;
+      <CardContainer>{petCards}</CardContainer>
     </>
   );
 };
