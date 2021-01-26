@@ -21,7 +21,6 @@ const FoundOnly = () => {
       await axios
         .get("https://pet-finder-backend.herokuapp.com/posts/found/20")
         .then((res) => {
-          console.log(res.data);
           setFoundPets(res.data);
         });
     }
@@ -39,6 +38,8 @@ const FoundOnly = () => {
           location={pet.location}
           name={pet.petName}
           email={pet.email}
+          url={pet.url}
+          description={pet.description}
           phoneNumber={pet.phoneNumber}
         />
       ))

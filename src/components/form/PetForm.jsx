@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "semantic-ui-react";
 import PlacesAutocomplete from "react-places-autocomplete";
+import { notification } from "antd";
 import axios from "axios";
 import "./PetForm.css";
 
@@ -9,13 +10,24 @@ function PetForm() {
 
   const [petNameInput, setPetNameInput] = useState("");
   const [furColorChoice, setFurColorChoice] = useState("white");
-
-  const [petSize, setPetSize] = useState("");
+  const [postTypeId, setPostTypeId] = useState();
+  const [petSize, setPetSize] = useState("small");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState({ file: null });
+
+  const openNotificationWithIcon = (type) => {
+    notification[type]({
+      message: "Submission Success!",
+      description:
+        "Your post as been added to our database. Our users will be on the look out!",
+    });
+    setTimeout(function () {
+      window.location = "/";
+    }, 4000);
+  };
 
   const onHandleChange = (e) => {
     setPetNameInput(e.target.value);
@@ -26,14 +38,8 @@ function PetForm() {
   };
 
   const handleColorChoice = (e) => {
-    // const choice = e.target.value === "other" ? "" : e.target.value;
-
     setFurColorChoice(e.target.value);
   };
-
-  // const otherColorChoice = (e) => {
-  //   setOtherColor(e.target.value);
-  // };
 
   const handleSizeChange = (e) => {
     setPetSize(e.target.value);
@@ -62,6 +68,7 @@ function PetForm() {
     e.preventDefault();
 
     const form = {
+      postTypeId,
       color: furColorChoice,
       size: petSize,
       location,
@@ -74,21 +81,21 @@ function PetForm() {
     axios
       .post("https://pet-finder-backend.herokuapp.com/posts/add", { form })
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        openNotificationWithIcon("success");
       })
       .catch((err) => {
         console.log(err);
       });
-    console.log(form);
   };
 
   const lostToggler = () => {
     showPetName(!petName);
+    setPostTypeId(1);
   };
 
   const resetToggler = () => {
     showPetName(false);
+    setPostTypeId(2);
   };
 
   return (

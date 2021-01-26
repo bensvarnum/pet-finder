@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import styled from "styled-components";
-import ContactModal from "./ContactModal"; 
+import ContactModal from "./ContactModal";
 
 const Info = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ const PostCard = (props) => {
             <Title color={props.PostTypeId === 1 ? "red" : "green"}>
               {props.PostTypeId === 1 ? "Lost" : "Found"}
             </Title>
-            <Image src={props.img} alt="lost pet" />
+            <Image src={props.url} alt="lost pet" />
           </Card.Header>
           <Info>
             <h3>{props.name}</h3>
@@ -49,6 +49,10 @@ const PostCard = (props) => {
                 {props.PostTypeId === 1 ? "Last Seen: " : "Found at: "}
               </span>
               {props.location}
+            </p>
+            <p>
+              <span>Description:</span>
+              {props.description}
             </p>
           </Info>
           <Card.Description>{props.notes}</Card.Description>
