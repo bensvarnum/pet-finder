@@ -5,8 +5,6 @@ import "./PDF.css";
 const ref = React.createRef();
 
 const PDF = (props) => {
-  console.log("pdf props", props);
-  console.log("image", props.images[0]);
 
   return (
     <>
