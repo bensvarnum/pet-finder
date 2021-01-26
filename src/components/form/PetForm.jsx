@@ -16,7 +16,7 @@ function PetForm() {
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
   const [email, setEmail] = useState("");
-  const [image, setImage] = useState({ file: null });
+  const [image, setImage] = useState("");
 
   const openNotificationWithIcon = (type) => {
     notification[type]({
@@ -34,7 +34,7 @@ function PetForm() {
   };
 
   const handleImage = (e) => {
-    setImage({ file: e.target.files[0] });
+    setImage(e.target.value);
   };
 
   const handleColorChoice = (e) => {
@@ -242,10 +242,11 @@ function PetForm() {
             onChange={handleNotes}
           />
           <Form.Group>
-            <input
-              type="file"
-              label="Upload Image"
-              name="petImage"
+            <Form.Input
+              type="text"
+              label="Image URL"
+              placeholder="Image Url"
+              value={image}
               onChange={handleImage}
             />
           </Form.Group>
