@@ -30,7 +30,7 @@ const PDF = (props) => {
         </div>
       </div>
       <Pdf targetRef={ref} filename="Lost-Pet.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Capture as PDF</button>}
+        {({ toPdf }) => <button className="pdf-button" onClick={toPdf}>Capture as PDF</button>}
       </Pdf>
     </>
   );
