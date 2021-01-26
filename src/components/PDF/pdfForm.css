@@ -38,7 +38,6 @@
 }
 
 .upload__image-wrapper {
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
