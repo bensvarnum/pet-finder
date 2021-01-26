@@ -5,8 +5,6 @@ import "./PDF.css";
 const ref = React.createRef();
 
 const PDF = (props) => {
-  console.log("pdf props", props);
-  console.log("image", props.images[0]);
 
   return (
     <>
@@ -30,7 +28,7 @@ const PDF = (props) => {
         </div>
       </div>
       <Pdf targetRef={ref} filename="Lost-Pet.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Capture as PDF</button>}
+        {({ toPdf }) => <button className="pdf-button" onClick={toPdf}>Capture as PDF</button>}
       </Pdf>
     </>
   );
