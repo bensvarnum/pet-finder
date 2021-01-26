@@ -52,7 +52,7 @@ function PdfForm() {
           <div className="poster__header">
             <h1>Fill out form to generate a pdf to print</h1>
           </div>
-          <Form form={form} name="control-hooks" onFinish={onFinish}>
+          <Form className="pdf-form" form={form} name="control-hooks" onFinish={onFinish}>
             <Form.Item
               name="name"
               label="Pet Name"

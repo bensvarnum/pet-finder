@@ -24,8 +24,6 @@ const PDF = (props) => {
             <h3>Size: {props.size}</h3>
             <h3>Last Seen: {props.location}</h3>
             <h3>Description: {props.description}</h3>
-          </div>
-          <div className="pdf__contact">
             <h3>Contact #: {props.number}</h3>
             <h3>Email: {props.email}</h3>
           </div>
