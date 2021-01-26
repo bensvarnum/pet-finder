@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://the-real-pet-finder.netlify.app">
-    <img src="./public/img/dog-bone-logo.png" alt="Logo" width="" height="">
+    <img src="./public/img/landing-page.png" alt="Logo" width="" height="">
   </a>
 
   <h3 align="center">Pet-Finder App</h3>
@@ -74,7 +74,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](<img src="./public/img/dog-bone-logo.png" alt="Logo" width="" height="">)
+<img src="./public/img/landing-page.png" alt="Logo" width="" height="">
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
