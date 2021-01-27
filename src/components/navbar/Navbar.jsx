@@ -53,7 +53,7 @@ const Navbar = () => {
         visible={visible}
       >
         <div className="drawer-nav-links">
-          <h3>Search Categories</h3>
+          {/* <h3>Search Categories</h3> */}
           <div className="drawer-nav-link-group">
             <a className="home" href="/">
               Home  

@@ -8,8 +8,8 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 1 0 auto;
   justify-content: center;
-  margin-bottom: 100px;
 `;
 
 const FoundOnly = () => {
