@@ -89,7 +89,6 @@
 
 .drawer-nav-links {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
     text-decoration: none;
 }
@@ -98,15 +97,14 @@
     display: block;
     text-decoration: none;
     color: black;
-    padding: 10px;
-}
-
-.drawer-nav-links button {
-    margin-top: 10px;
-    width: 65%;
+    padding: 5px 0px 10px 0px;
 }
 
 .auth-buttons {
     display: flex;
     flex-direction: column;
+}
+
+.auth-buttons .ant-btn {
+    width: 65% !important;
 }
