@@ -1,33 +1,51 @@
+@media screen and (max-width: 600px) {
+  .container input,
+  .container textarea {
+    width: auto !important;
+  }
+  .upload__image-wrapper button {
+    margin: 10px;
+    width: 85%;
+  }
+  .form__button {
+    margin: auto !important;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
-  margin-bottom: 100px;
 }
 
 .container input,
 .container textarea {
-  width: 250px;
+  width: 350px;
   float: right;
   margin-left: auto;
   margin-right: auto;
 }
 
 .container label {
+  width: auto;
+  float: center;
   margin-right: auto;
   align-items: center;
 }
 
 .form__button {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  margin: 10px;
   padding-left: 5px;
+}
+
+.form__button button:hover {
+  background-color: blue !important;
 }
 
 .button__group {
